@@ -1,32 +1,31 @@
-import localFont from "next/font/local";
 import Image from "next/image";
-import data from "../data.json";
 
-const hanken = localFont({ src: "../fonts/static/HankenGrotesk-Medium.ttf" });
 
-const Card = ({cat, index}) => {
+
+
+const Card = ({cat}:any) => {
   return (
 
         <div
-          key={index}
-          className="m-3 p-3 grid grid-cols-2 border border-black/10 rounded-xl"
+          className="grid grid-cols-2 px-1 py-3 my-3 "
         >
-          <div className="flex">
+          <div className="flex items-center">
             <Image
               width={20}
               height={20}
               alt="5"
               src={cat.icon}
-              className="inline mr-2"
+              className='inline mr-2' 
             />
-            <p>{cat.category}</p>
+            <p className={`${cat.color} font-bold`}>{cat.category}</p>
           </div>
           <div className="flex justify-end text-lg">
-            <span className="font-extralight">
+            <span className={`font-black`}>
               {cat.score}
             </span>
-              <span className="font-bold whitespace-pre"> / 100</span>
+              <span className="font-bold whitespace-pre text-black/50 text-base items-start"> / 100</span>
           </div>
+          
         </div>
   );
 };
