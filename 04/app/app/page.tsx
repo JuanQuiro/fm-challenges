@@ -31,7 +31,7 @@ function Advice() {
         <img  src="/1.svg" alt="" />
       </div>
       <div className="flex justify-center items-center">
-      <div className='relative bottom-5 rounded-full bg-green-700 p-2'>
+      <div className='relative bottom-5 rounded-full bg-green-700 hover:bg-green-300 p-2'>
         <img  src="./2.svg" alt="button" />
       </div>
       </div>
